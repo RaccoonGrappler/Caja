@@ -1,0 +1,152 @@
+# Production MLOps .gitignore template
+# Gathered from: https://gitignore.pro/python-gitignore/data-science
+
+# Model serving artifacts
+serving_models/
+deployed_models/
+model_endpoints/
+inference_cache/
+*.serving
+
+# Container and orchestration
+.dockerignore
+docker-compose.override.yml
+k8s/secrets/
+k8s/configs/
+helm/values-*.yaml
+kubernetes_cache/
+
+# CI/CD and deployment
+.github/workflows/*.local.yml
+.gitlab-ci.local.yml
+deployment_configs/
+pipeline_cache/
+build_artifacts/
+deployment_logs/
+
+# Model monitoring
+monitoring_data/
+drift_detection/
+model_performance/
+alert_logs/
+monitoring.db
+
+# A/B testing and experimentation
+ab_test_results/
+experiment_splits/
+treatment_data/
+control_data/
+
+# Production data (never commit)
+production_data/
+customer_data/
+sensitive_data/
+pii_data/
+*.prod.csv
+
+# Model registry production
+model_store_prod/
+production_registry/
+staged_models/
+challenger_models/
+
+# Infrastructure as Code
+terraform.tfstate*
+.terraform/
+pulumi/
+ansible_cache/
+
+# Secrets and configuration
+.env.production
+.env.staging
+secrets/
+certificates/
+*.pem
+*.key
+*.crt
+
+# Databases
+production.db
+monitoring.db
+metrics.db
+*.sqlite3
+
+# Logging and monitoring
+logs/
+production_logs/
+error_logs/
+access_logs/
+*.log
+*.log.*
+
+# Performance and profiling
+performance_reports/
+profiling_data/
+load_test_results/
+benchmark_data/
+
+# Cloud provider specific
+.aws/
+.gcp/
+.azure/
+cloud_configs/
+
+# Model versioning in production
+model_versions/
+version_history/
+rollback_data/
+
+# Feature store production
+feature_store_prod/
+feature_cache/
+feature_monitoring/
+
+# Stream processing
+kafka_data/
+stream_cache/
+real_time_data/
+
+# Python environment
+venv/
+.venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build and packaging
+build/
+dist/
+*.egg-info/
+wheels/
+
+# Testing in production
+integration_test_data/
+e2e_test_results/
+production_test_cache/
+
+# Backup and recovery
+backups/
+model_backups/
+data_backups/
+*.backup
+*.bak
+
+# Temporary production files
+temp_prod/
+staging_temp/
+deployment_temp/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Documentation builds
+docs/_build/
+api_docs/
+model_docs/
