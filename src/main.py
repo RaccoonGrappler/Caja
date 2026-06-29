@@ -4,7 +4,7 @@ def main():
     print("Bienvenido cazador! Es bueno verte por aca!")
     print("Que cazaremos el dia de hoy?")
 
-    monsters = ["Rathalos", "Kirin", "Mizutsune", "Rajang", "Zoh Shia", "Nu Udra", "Chameleos", "Valstrax"]
+    monsters = ["Rathalos", "Kirin", "Mizutsune", "Rajang", "Zoh Shia", "Nu Udra", "Chameleos", "Valstrax", "Khezu", "Arkveld", "Lala Barina"]
 
     print(f"The options are: {', '.join(monsters)}")
 
@@ -21,7 +21,9 @@ def main():
         "Ataque": "Carne de Wyvern", 
         "Resistencia": "Patas de pescado", 
         "Defensa": "Hongo gigante de wyveria", 
-        "Balanceado": "Puggie a la braza muajaja!"
+        "Balanceado": "Puggie a la braza muajaja!",
+        "Collab": "Fideos sabrosos de algun restaurante de Japon",
+        "Ataque+": "Carne de Rathalos"
     }
 
     print("Hola miauestro! Mira lo que tenemos en el menu miau!: ")
