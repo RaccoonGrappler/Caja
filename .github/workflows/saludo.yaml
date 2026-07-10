@@ -1,0 +1,31 @@
+name: Saludando sabrosamente
+
+on:
+    push:
+        branches: [main]
+    workflow_dispatch:
+
+jobs:
+    saludo:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: cargando repo
+              uses: actions/checkout@v3
+
+            - name: saludo basico
+              run: echo "Hola carajo mierda! :D"
+
+            - name: saludo complejo
+              run: |
+                echo "ESto es un saludo"
+                echo "Mas complejo porque"
+                echo "Son varias lineas de codigo Bash :D"
+    pollito:
+        needs: saludo
+        runs-on: ubuntu-latest
+        
+        steps:
+            - name: otro saludo
+              run: echo "${{ toJSON(github.event) }}"
+              
